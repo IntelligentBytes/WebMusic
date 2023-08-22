@@ -472,15 +472,15 @@ var Player = (function () {
         e.id === t.id ? "active" : ""
       }" data-play-id="${
         e.id
-      }">\n                    <i class="ri-play-fill icon-play"></i>\n                    <i class="ri-pause-fill icon-pause"></i>\n                </a>\n            </div>\n            <div class="list__content">\n                <a href="song-details.html" class="list__title text-truncate">${
+      }">\n                    <i class="bi bi-play-fill icon-play"></i>\n                    <i class="bi bi-pause-fill icon-pause"></i>\n                </a>\n            </div>\n            <div class="list__content">\n                <a href="song-details.html" class="list__title text-truncate">${
         e.name
       }</a>\n                <p class="list__subtitle text-truncate">\n                    <a href="artist-details.html">${
         e.artist
       }</a>\n                </p>\n            </div>\n            <ul class="list__option">\n                <li class="list__icon-hover">\n                    <a href="javascript:void(0);" role="button" class="d-inline-flex" data-remove-song-id="${
         e.id
-      }">\n                        <i class="ri-close-line fs-6"></i>\n                    </a>\n                </li>\n                <li>\n                    <a href="javascript:void(0);" role="button" class="d-inline-flex" data-favorite-id="${
+      }">\n                        <i class="bi bi-x "></i>\n                    </a>\n                </li>\n                <li>\n                    <a href="javascript:void(0);" role="button" class="d-inline-flex" data-favorite-id="${
         e.id
-      }">\n                        <i class="ri-heart-line heart-empty"></i>\n                        <i class="ri-heart-fill heart-fill"></i>\n                    </a>\n                </li>\n            </ul>\n        </div>`;
+      }">\n                        <i class="bi bi-heart heart-empty"></i>\n                        <i class="bi bi-heart-fill heart-fill"></i>\n                    </a>\n                </li>\n            </ul>\n        </div>`;
     },
     d = function () {
       (i = []),
@@ -488,7 +488,7 @@ var Player = (function () {
         Amplitude.pause(),
         Utils.removeLocalItem("songs"),
         a.html(
-          '<div class="col-sm-8 col-10 mx-auto mt-5 text-center">\n            <i class="ri-music-2-line mb-3"></i>\n            <p>هیچ موزیک، آلبوم یا لیست پخشی به لیست اضافه نشده است.</p>\n        </div>'
+          '<div class="col-sm-8 col-10 mx-auto mt-5 text-center">\n            <i class="bi-music-note-beamed fa-2xl mb-3"></i>\n            <p>هیچ موزیک، آلبوم یا لیست پخشی به لیست اضافه نشده است.</p>\n        </div>'
         );
     };
   return {
@@ -604,9 +604,9 @@ var Player = (function () {
         (r = $(".player-volume"))
           .find('input[type="range"]')
           .on("input", function () {
-            var e = r.find(".ri-volume-mute-fill"),
-              t = r.find(".ri-volume-down-fill"),
-              a = r.find(".ri-volume-up-fill"),
+            var e = r.find(".bi-volume-mute-fill"),
+              t = r.find(".bi-volume-down-fill"),
+              a = r.find(".bi-volume-up-fill"),
               i = $(this),
               n = parseInt(i.val(), 10),
               l = "d-block",
