@@ -1,5 +1,5 @@
 from django.shortcuts import render
 
 # Create your views here.
-def category(request):
+def IndexView(request):
     return render(request,'category/index.html')

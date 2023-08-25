@@ -1,5 +1,7 @@
 from django.urls import path
-from .views import category
+from category import views
+
+app_name = 'category'
 urlpatterns = [
-    path('',category,name='category'),
+    path('', views.IndexView, name='index'),
 ]
