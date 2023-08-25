@@ -1,0 +1,164 @@
+{% extends 'shared/base.html' %}
+{% load static %}
+
+{% block title %}دسته‌بندی{% endblock title %}
+
+{% block content %}
+  <main id="page_content">
+    <div
+      class="hero"
+      style="background-image: url({% static 'images/banner/home.jpg' %})"
+    ></div>
+    <div class="under-hero container">
+      <div class="section">
+        <div class="section__head">
+          <h3 class="mb-0">
+            ژانر های <span class="text-primary">موزیک</span>
+          </h3>
+        </div>
+        <div class="row g-4">
+          <div class="col-xl-3 col-sm-6">
+            <div class="cover cover--round">
+              <a href="genre-details.html" class="cover__image"
+                ><img
+                  src= "{% static 'images/background/horizontal/1.jpg' %}"
+                  alt="Remix"
+                />
+                <div class="cover__image__content">
+                  <span class="cover__title mb-1 fs-6 text-truncate"
+                    >رمیکس</span
+                  >
+                </div></a
+              >
+            </div>
+          </div>
+          <div class="col-xl-3 col-sm-6">
+            <div class="cover cover--round">
+              <a href="genre-details.html" class="cover__image"
+                ><img src= "{% static 'images/background/horizontal/2.jpg' %}" alt="Rock" />
+                <div class="cover__image__content">
+                  <span class="cover__title mb-1 fs-6 text-truncate"
+                    >راک</span
+                  >
+                </div></a
+              >
+            </div>
+          </div>
+          <div class="col-xl-3 col-sm-6">
+            <div class="cover cover--round">
+              <a href="genre-details.html" class="cover__image"
+                ><img src= "{% static 'images/background/horizontal/3.jpg' %}" alt="Sufi" />
+                <div class="cover__image__content">
+                  <span class="cover__title mb-1 fs-6 text-truncate"
+                    >پاپ</span
+                  >
+                </div></a
+              >
+            </div>
+          </div>
+          <div class="col-xl-3 col-sm-6">
+            <div class="cover cover--round">
+              <a href="genre-details.html" class="cover__image"
+                ><img
+                  src= "{% static 'images/background/horizontal/4.jpg' %}"
+                  alt="Romantic"
+                />
+                <div class="cover__image__content">
+                  <span class="cover__title mb-1 fs-6 text-truncate"
+                    >عاشقانه</span
+                  >
+                </div></a
+              >
+            </div>
+          </div>
+          <div class="col-xl-3 col-sm-6">
+            <div class="cover cover--round">
+              <a href="genre-details.html" class="cover__image"
+                ><img
+                  src= "{% static 'images/background/horizontal/5.jpg' %}"
+                  alt="Sports"
+                />
+                <div class="cover__image__content">
+                  <span class="cover__title mb-1 fs-6 text-truncate"
+                    >جاز</span
+                  >
+                </div></a
+              >
+            </div>
+          </div>
+          <div class="col-xl-3 col-sm-6">
+            <div class="cover cover--round">
+              <a href="genre-details.html" class="cover__image"
+                ><img
+                  src= "{% static 'images/background/horizontal/6.jpg' %}"
+                  alt="Retro"
+                />
+                <div class="cover__image__content">
+                  <span class="cover__title mb-1 fs-6 text-truncate"
+                    >نوستالژی</span
+                  >
+                </div></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section__head">
+          <h3 class="mb-0">
+            ژانر های <span class="text-primary">پادکست</span>
+          </h3>
+        </div>
+        <div class="row g-4">
+          <div class="col-xl-3 col-sm-6">
+            <div class="cover cover--round">
+              <a href="genre-details.html" class="cover__image"
+                ><img
+                  src= "{% static 'images/background/horizontal/3.jpg' %}"
+                  alt="Stories"
+                />
+                <div class="cover__image__content">
+                  <span class="cover__title mb-1 fs-6 text-truncate"
+                    >داستان</span
+                  >
+                </div></a
+              >
+            </div>
+          </div>
+          <div class="col-xl-3 col-sm-6">
+            <div class="cover cover--round">
+              <a href="genre-details.html" class="cover__image"
+                ><img
+                  src= "{% static 'images/background/horizontal/5.jpg' %}"
+                  alt="Meditation & Workout"
+                />
+                <div class="cover__image__content">
+                  <span class="cover__title mb-1 fs-6 text-truncate"
+                    >ورزشی</span
+                  >
+                </div></a
+              >
+            </div>
+          </div>
+          <div class="col-xl-3 col-sm-6">
+            <div class="cover cover--round">
+              <a href="genre-details.html" class="cover__image"
+                ><img
+                  src= "{% static 'images/background/horizontal/6.jpg' %}"
+                  alt="Business"
+                />
+                <div class="cover__image__content">
+                  <span class="cover__title mb-1 fs-6 text-truncate"
+                    >تجارت</span
+                  >
+                </div></a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer id="footer">
+    </footer>
+  </main>
+{% endblock content %}
