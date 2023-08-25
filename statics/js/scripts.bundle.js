@@ -803,3 +803,25 @@ jalaliDatepicker.startWatch({
   minDate: "attr",
   maxDate: "attr"
 }); 
+
+/////////////////// Custom functions //////////////////
+document.addEventListener('DOMContentLoaded', function() {
+  const fetchButton = document.getElementById('load-more-music');
+  const snippetContainer = document.getElementById('music-list-container');
+  const arrow_icon = document.getElementById('load-more-arrow-icon');
+
+  fetchButton.addEventListener('click', function() {
+    fetchButton.disabled=true;
+    arrow_icon.classList.add('fa-spin');
+    fetch('/music/load-more')
+        .then(response => response.json())
+        .then(data => {
+            snippetContainer.innerHTML += data.html;
+            fetchButton.disabled=false;
+            arrow_icon.classList.remove('fa-spin');
+        })
+        .catch(error => {
+            console.error('Error fetching HTML snippet:', error);
+        });
+  });
+});

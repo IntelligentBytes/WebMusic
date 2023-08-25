@@ -1,0 +1,1794 @@
+{% extends 'shared/base.html' %}
+{% load static %}
+
+{% block title %}همه اهنگ‌ها{% endblock title %}
+
+{% block content %}
+  <main id="page_content">
+    <div
+      class="hero"
+      style="background-image: url({% static 'images/banner/song.jpg' %})"
+    ></div>
+    <div class="under-hero container">
+      <div class="section">
+        <div class="section__head align-items-center">
+          <span class="d-block pe-3 fs-6 fw-semi-bold"
+            >5240 موزیک در لیست</span
+          >
+          <div>
+            <select class="form-select" aria-label="Filter song">
+              <option value="Popular">محبوب</option>
+              <option value="Most played">بیشترین پخش</option>
+              <option value="A to Z">الفبا (صعودی)</option>
+              <option value="Z to A">الفبا (نزولی)</option>
+            </select>
+          </div>
+        </div>
+        <div class="list">
+          <div id="music-list-container" class="row">
+            <div class="col-xl-6">
+              <div
+                class="list__item"
+                data-song-id="1"
+                data-song-name="چنگیز"
+                data-song-artist="محسن چاوشی"
+                data-song-album="امیر بی گزند"
+                data-song-url="{% static 'audio/ringtone-1.mp3' %}"
+                data-song-cover="{% static 'images/music_covers/small/1.jpg' %}"
+              >
+                <div class="list__cover">
+                  <img
+                    src="{% static 'images/music_covers/small/1.jpg' %}"
+                    alt="چنگیز"
+                  />
+                  <a
+                    href="javascript:void(0);"
+                    class="btn btn-play btn-sm btn-default btn-icon rounded-pill"
+                    data-play-id="1"
+                    aria-label="Play pause"
+                    ><i class="bi bi-play-fill fa-xl icon-play"></i>
+                    <i class="bi bi-pause-fill fa-xl icon-pause"></i
+                  ></a>
+                </div>
+                <div class="list__content">
+                  <a
+                    href="song-details.html"
+                    class="list__title text-truncate"
+                    >چنگیز</a
+                  >
+                  <p class="list__subtitle text-truncate">
+                    <a href="artist-details.html">محسن چاوشی</a>
+                  </p>
+                </div>
+                <ul class="list__option">
+                  <li>
+                    <a
+                      href="javascript:void(0);"
+                      role="button"
+                      class="d-inline-flex"
+                      aria-label="Favorite"
+                      data-favorite-id="1"
+                      ><i class="bi bi-heart fa-xl heart-empty"></i>
+                      <i class="bi bi-heart-fill fa-xl heart-fill"></i
+                    ></a>
+                  </li>
+                  <li>01:14</li>
+                  <li class="dropstart d-inline-flex">
+                    <a
+                      class="dropdown-link"
+                      href="javascript:void(0);"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-label="Cover options"
+                      aria-expanded="false"
+                      ><i class="bi bi-three-dots fa-xl"></i
+                    ></a>
+                    <ul class="dropdown-menu dropdown-menu-sm">
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          data-playlist-id="1"
+                          >افزودن به لیست</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          data-queue-id="1"
+                          >افزودن به صف</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          data-next-id="1"
+                          >بعدی برای پخش</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          >اشتراک</a
+                        >
+                      </li>
+                      <li class="dropdown-divider"></li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          data-play-id="1"
+                          >پخش</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div
+                class="list__item"
+                data-song-id="2"
+                data-song-name="جانا"
+                data-song-artist="ایهام"
+                data-song-album="جانا"
+                data-song-url="{% static 'audio/ringtone-2.mp3' %}"
+                data-song-cover="{% static 'images/music_covers/small/2.jpg' %}"
+              >
+                <div class="list__cover">
+                  <img
+                    src="{% static 'images/music_covers/small/2.jpg' %}"
+                    alt="جانا"
+                  />
+                  <a
+                    href="javascript:void(0);"
+                    class="btn btn-play btn-sm btn-default btn-icon rounded-pill"
+                    data-play-id="2"
+                    aria-label="Play pause"
+                    ><i class="bi bi-play-fill fa-xl icon-play"></i>
+                    <i class="bi bi-pause-fill fa-xl icon-pause"></i
+                  ></a>
+                </div>
+                <div class="list__content">
+                  <a
+                    href="song-details.html"
+                    class="list__title text-truncate"
+                    >جانا</a
+                  >
+                  <p class="list__subtitle text-truncate">
+                    <a href="artist-details.html">ایهام</a>
+                  </p>
+                </div>
+                <ul class="list__option">
+                  <li>
+                    <a
+                      href="javascript:void(0);"
+                      role="button"
+                      class="d-inline-flex"
+                      aria-label="Favorite"
+                      data-favorite-id="2"
+                      ><i class="bi bi-heart fa-xl heart-empty"></i>
+                      <i class="bi bi-heart-fill fa-xl heart-fill"></i
+                    ></a>
+                  </li>
+                  <li>03:24</li>
+                  <li class="dropstart d-inline-flex">
+                    <a
+                      class="dropdown-link"
+                      href="javascript:void(0);"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-label="Cover options"
+                      aria-expanded="false"
+                      ><i class="bi bi-three-dots fa-xl"></i
+                    ></a>
+                    <ul class="dropdown-menu dropdown-menu-sm">
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          data-playlist-id="2"
+                          >افزودن به لیست</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          data-queue-id="2"
+                          >افزودن به صف</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          data-next-id="2"
+                          >بعدی برای پخش</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          >اشتراک</a
+                        >
+                      </li>
+                      <li class="dropdown-divider"></li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          data-play-id="2"
+                          >پخش</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div
+                class="list__item"
+                data-song-id="3"
+                data-song-name="تو را که دیدم"
+                data-song-artist="راغب"
+                data-song-album="تو را که دیدم"
+                data-song-url="{% static 'audio/ringtone-3.mp3' %}"
+                data-song-cover="{% static 'images/music_covers/small/3.jpg' %}"
+              >
+                <div class="list__cover">
+                  <img
+                    src="{% static 'images/music_covers/small/3.jpg' %}"
+                    alt="تو را که دیدم"
+                  />
+                  <a
+                    href="javascript:void(0);"
+                    class="btn btn-play btn-sm btn-default btn-icon rounded-pill"
+                    data-play-id="3"
+                    aria-label="Play pause"
+                    ><i class="bi bi-play-fill fa-xl icon-play"></i>
+                    <i class="bi bi-pause-fill fa-xl icon-pause"></i
+                  ></a>
+                </div>
+                <div class="list__content">
+                  <a
+                    href="song-details.html"
+                    class="list__title text-truncate"
+                    >تو را که دیدم</a
+                  >
+                  <p class="list__subtitle text-truncate">
+                    <a href="artist-details.html"
+                      >راغب</a
+                    >
+                  </p>
+                </div>
+                <ul class="list__option">
+                  <li>
+                    <a
+                      href="javascript:void(0);"
+                      role="button"
+                      class="d-inline-flex"
+                      aria-label="Favorite"
+                      data-favorite-id="3"
+                      ><i class="bi bi-heart fa-xl heart-empty"></i>
+                      <i class="bi bi-heart-fill fa-xl heart-fill"></i
+                    ></a>
+                  </li>
+                  <li>01:41</li>
+                  <li class="dropstart d-inline-flex">
+                    <a
+                      class="dropdown-link"
+                      href="javascript:void(0);"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-label="Cover options"
+                      aria-expanded="false"
+                      ><i class="bi bi-three-dots fa-xl"></i
+                    ></a>
+                    <ul class="dropdown-menu dropdown-menu-sm">
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          data-playlist-id="3"
+                          >افزودن به لیست</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          data-queue-id="3"
+                          >افزودن به صف</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          data-next-id="3"
+                          >بعدی برای پخش</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          >اشتراک</a
+                        >
+                      </li>
+                      <li class="dropdown-divider"></li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          data-play-id="3"
+                          >پخش</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div
+                class="list__item"
+                data-song-id="4"
+                data-song-name="چراغونی"
+                data-song-artist="علی یاسینی"
+                data-song-album="چراغونی"
+                data-song-url="{% static 'audio/ringtone-4.mp3' %}"
+                data-song-cover="{% static 'images/music_covers/small/4.jpg' %}"
+              >
+                <div class="list__cover">
+                  <img src="{% static 'images/music_covers/small/4.jpg' %}" alt="چراغونی" />
+                  <a
+                    href="javascript:void(0);"
+                    class="btn btn-play btn-sm btn-default btn-icon rounded-pill"
+                    data-play-id="4"
+                    aria-label="Play pause"
+                    ><i class="bi bi-play-fill fa-xl icon-play"></i>
+                    <i class="bi bi-pause-fill fa-xl icon-pause"></i
+                  ></a>
+                </div>
+                <div class="list__content">
+                  <a
+                    href="song-details.html"
+                    class="list__title text-truncate"
+                    >چراغونی</a
+                  >
+                  <p class="list__subtitle text-truncate">
+                    <a href="artist-details.html">علی یاسینی</a>
+                  </p>
+                </div>
+                <ul class="list__option">
+                  <li>
+                    <a
+                      href="javascript:void(0);"
+                      role="button"
+                      class="d-inline-flex"
+                      aria-label="Favorite"
+                      data-favorite-id="4"
+                      ><i class="bi bi-heart fa-xl heart-empty"></i>
+                      <i class="bi bi-heart-fill fa-xl heart-fill"></i
+                    ></a>
+                  </li>
+                  <li>02:20</li>
+                  <li class="dropstart d-inline-flex">
+                    <a
+                      class="dropdown-link"
+                      href="javascript:void(0);"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-label="Cover options"
+                      aria-expanded="false"
+                      ><i class="bi bi-three-dots fa-xl"></i
+                    ></a>
+                    <ul class="dropdown-menu dropdown-menu-sm">
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          data-playlist-id="4"
+                          >افزودن به لیست</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          data-queue-id="4"
+                          >افزودن به صف</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          data-next-id="4"
+                          >بعدی برای پخش</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          >اشتراک</a
+                        >
+                      </li>
+                      <li class="dropdown-divider"></li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          data-play-id="4"
+                          >پخش</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div
+                class="list__item"
+                data-song-id="5"
+                data-song-name="پیرهن"
+                data-song-artist="محمد لطفی"
+                data-song-album="پیرهن"
+                data-song-url="{% static 'audio/ringtone-5.mp3' %}"
+                data-song-cover="{% static 'images/music_covers/small/5.jpg' %}"
+              >
+                <div class="list__cover">
+                  <img
+                    src="{% static 'images/music_covers/small/5.jpg' %}"
+                    alt="پیرهن"
+                  />
+                  <a
+                    href="javascript:void(0);"
+                    class="btn btn-play btn-sm btn-default btn-icon rounded-pill"
+                    data-play-id="5"
+                    aria-label="Play pause"
+                    ><i class="bi bi-play-fill fa-xl icon-play"></i>
+                    <i class="bi bi-pause-fill fa-xl icon-pause"></i
+                  ></a>
+                </div>
+                <div class="list__content">
+                  <a
+                    href="song-details.html"
+                    class="list__title text-truncate"
+                    >پیرهن</a
+                  >
+                  <p class="list__subtitle text-truncate">
+                    <a href="artist-details.html"
+                      >محمد لطفی</a
+                    >
+                  </p>
+                </div>
+                <ul class="list__option">
+                  <li>
+                    <a
+                      href="javascript:void(0);"
+                      role="button"
+                      class="d-inline-flex"
+                      aria-label="Favorite"
+                      data-favorite-id="5"
+                      ><i class="bi bi-heart fa-xl heart-empty"></i>
+                      <i class="bi bi-heart-fill fa-xl heart-fill"></i
+                    ></a>
+                  </li>
+                  <li>02:36</li>
+                  <li class="dropstart d-inline-flex">
+                    <a
+                      class="dropdown-link"
+                      href="javascript:void(0);"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-label="Cover options"
+                      aria-expanded="false"
+                      ><i class="bi bi-three-dots fa-xl"></i
+                    ></a>
+                    <ul class="dropdown-menu dropdown-menu-sm">
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          data-playlist-id="5"
+                          >افزودن به لیست</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          data-queue-id="5"
+                          >افزودن به صف</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          data-next-id="5"
+                          >بعدی برای پخش</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          >اشتراک</a
+                        >
+                      </li>
+                      <li class="dropdown-divider"></li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          data-play-id="5"
+                          >پخش</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-xl-6">
+              <div
+                class="list__item"
+                data-song-id="6"
+                data-song-name="قشنگ من"
+                data-song-artist="محسن چاوشی"
+                data-song-album="قشنگ من"
+                data-song-url="{% static 'audio/ringtone-6.mp3' %}"
+                data-song-cover="{% static 'images/music_covers/small/6.jpg' %}"
+              >
+                <div class="list__cover">
+                  <img src="{% static 'images/music_covers/small/6.jpg' %}" alt="قشنگ من" />
+                  <a
+                    href="javascript:void(0);"
+                    class="btn btn-play btn-sm btn-default btn-icon rounded-pill"
+                    data-play-id="6"
+                    aria-label="Play pause"
+                    ><i class="bi bi-play-fill fa-xl icon-play"></i>
+                    <i class="bi bi-pause-fill fa-xl icon-pause"></i
+                  ></a>
+                </div>
+                <div class="list__content">
+                  <a
+                    href="song-details.html"
+                    class="list__title text-truncate"
+                    >قشنگ من</a
+                  >
+                  <p class="list__subtitle text-truncate">
+                    <a href="artist-details.html">محسن چاوشی</a>
+                  </p>
+                </div>
+                <ul class="list__option">
+                  <li>
+                    <a
+                      href="javascript:void(0);"
+                      role="button"
+                      class="d-inline-flex"
+                      aria-label="Favorite"
+                      data-favorite-id="6"
+                      ><i class="bi bi-heart fa-xl heart-empty"></i>
+                      <i class="bi bi-heart-fill fa-xl heart-fill"></i
+                    ></a>
+                  </li>
+                  <li>03:47</li>
+                  <li class="dropstart d-inline-flex">
+                    <a
+                      class="dropdown-link"
+                      href="javascript:void(0);"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-label="Cover options"
+                      aria-expanded="false"
+                      ><i class="bi bi-three-dots fa-xl"></i
+                    ></a>
+                    <ul class="dropdown-menu dropdown-menu-sm">
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          data-playlist-id="6"
+                          >افزودن به لیست</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          data-queue-id="6"
+                          >افزودن به صف</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          data-next-id="6"
+                          >بعدی برای پخش</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          >اشتراک</a
+                        >
+                      </li>
+                      <li class="dropdown-divider"></li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          data-play-id="6"
+                          >پخش</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div
+                class="list__item"
+                data-song-id="7"
+                data-song-name="شاهکار"
+                data-song-artist="مسعود صادقلو"
+                data-song-album="شاهکار"
+                data-song-url="{% static 'audio/ringtone-7.mp3' %}"
+                data-song-cover="{% static 'images/music_covers/small/7.jpg' %}"
+              >
+                <div class="list__cover">
+                  <img src="{% static 'images/music_covers/small/7.jpg' %}" alt="شاهکار" />
+                  <a
+                    href="javascript:void(0);"
+                    class="btn btn-play btn-sm btn-default btn-icon rounded-pill"
+                    data-play-id="7"
+                    aria-label="Play pause"
+                    ><i class="bi bi-play-fill fa-xl icon-play"></i>
+                    <i class="bi bi-pause-fill fa-xl icon-pause"></i
+                  ></a>
+                </div>
+                <div class="list__content">
+                  <a
+                    href="song-details.html"
+                    class="list__title text-truncate"
+                    >شاهکار</a
+                  >
+                  <p class="list__subtitle text-truncate">
+                    <a href="artist-details.html">مسعود صادقلو</a>
+                  </p>
+                </div>
+                <ul class="list__option">
+                  <li>
+                    <a
+                      href="javascript:void(0);"
+                      role="button"
+                      class="d-inline-flex"
+                      aria-label="Favorite"
+                      data-favorite-id="7"
+                      ><i class="bi bi-heart fa-xl heart-empty"></i>
+                      <i class="bi bi-heart-fill fa-xl heart-fill"></i
+                    ></a>
+                  </li>
+                  <li>01:04</li>
+                  <li class="dropstart d-inline-flex">
+                    <a
+                      class="dropdown-link"
+                      href="javascript:void(0);"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-label="Cover options"
+                      aria-expanded="false"
+                      ><i class="bi bi-three-dots fa-xl"></i
+                    ></a>
+                    <ul class="dropdown-menu dropdown-menu-sm">
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          data-playlist-id="7"
+                          >افزودن به لیست</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          data-queue-id="7"
+                          >افزودن به صف</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          data-next-id="7"
+                          >بعدی برای پخش</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          >اشتراک</a
+                        >
+                      </li>
+                      <li class="dropdown-divider"></li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          data-play-id="7"
+                          >پخش</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div
+                class="list__item"
+                data-song-id="8"
+                data-song-name="پستچی"
+                data-song-artist="محسن چاوشی"
+                data-song-album="پستچی"
+                data-song-url="{% static 'audio/ringtone-8.mp3' %}"
+                data-song-cover="{% static 'images/music_covers/small/8.jpg' %}"
+              >
+                <div class="list__cover">
+                  <img src="{% static 'images/music_covers/small/8.jpg' %}" alt="پستچی" />
+                  <a
+                    href="javascript:void(0);"
+                    class="btn btn-play btn-sm btn-default btn-icon rounded-pill"
+                    data-play-id="8"
+                    aria-label="Play pause"
+                    ><i class="bi bi-play-fill fa-xl icon-play"></i>
+                    <i class="bi bi-pause-fill fa-xl icon-pause"></i
+                  ></a>
+                </div>
+                <div class="list__content">
+                  <a
+                    href="song-details.html"
+                    class="list__title text-truncate"
+                    >پستچی</a
+                  >
+                  <p class="list__subtitle text-truncate">
+                    <a href="artist-details.html">محسن چاوشی</a>
+                  </p>
+                </div>
+                <ul class="list__option">
+                  <li>
+                    <a
+                      href="javascript:void(0);"
+                      role="button"
+                      class="d-inline-flex"
+                      aria-label="Favorite"
+                      data-favorite-id="8"
+                      ><i class="bi bi-heart fa-xl heart-empty"></i>
+                      <i class="bi bi-heart-fill fa-xl heart-fill"></i
+                    ></a>
+                  </li>
+                  <li>04:43</li>
+                  <li class="dropstart d-inline-flex">
+                    <a
+                      class="dropdown-link"
+                      href="javascript:void(0);"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-label="Cover options"
+                      aria-expanded="false"
+                      ><i class="bi bi-three-dots fa-xl"></i
+                    ></a>
+                    <ul class="dropdown-menu dropdown-menu-sm">
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          data-playlist-id="8"
+                          >افزودن به لیست</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          data-queue-id="8"
+                          >افزودن به صف</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          data-next-id="8"
+                          >بعدی برای پخش</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          >اشتراک</a
+                        >
+                      </li>
+                      <li class="dropdown-divider"></li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          data-play-id="8"
+                          >پخش</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div
+                class="list__item"
+                data-song-id="9"
+                data-song-name="رنگین کمون"
+                data-song-artist="کسری زاهدی"
+                data-song-album="رنگین کمون"
+                data-song-url="{% static 'audio/ringtone-3.mp3' %}"
+                data-song-cover="{% static 'images/music_covers/small/9.jpg' %}"
+              >
+                <div class="list__cover">
+                  <img src="{% static 'images/music_covers/small/9.jpg' %}" alt="رنگین کمون" />
+                  <a
+                    href="javascript:void(0);"
+                    class="btn btn-play btn-sm btn-default btn-icon rounded-pill"
+                    data-play-id="9"
+                    aria-label="Play pause"
+                    ><i class="bi bi-play-fill fa-xl icon-play"></i>
+                    <i class="bi bi-pause-fill fa-xl icon-pause"></i
+                  ></a>
+                </div>
+                <div class="list__content">
+                  <a
+                    href="song-details.html"
+                    class="list__title text-truncate"
+                    >رنگین کمون</a
+                  >
+                  <p class="list__subtitle text-truncate">
+                    <a href="artist-details.html">کسری زاهدی</a>
+                  </p>
+                </div>
+                <ul class="list__option">
+                  <li>
+                    <a
+                      href="javascript:void(0);"
+                      role="button"
+                      class="d-inline-flex"
+                      aria-label="Favorite"
+                      data-favorite-id="9"
+                      ><i class="bi bi-heart fa-xl heart-empty"></i>
+                      <i class="bi bi-heart-fill fa-xl heart-fill"></i
+                    ></a>
+                  </li>
+                  <li>02:48</li>
+                  <li class="dropstart d-inline-flex">
+                    <a
+                      class="dropdown-link"
+                      href="javascript:void(0);"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-label="Cover options"
+                      aria-expanded="false"
+                      ><i class="bi bi-three-dots fa-xl"></i
+                    ></a>
+                    <ul class="dropdown-menu dropdown-menu-sm">
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          data-playlist-id="9"
+                          >افزودن به لیست</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          data-queue-id="9"
+                          >افزودن به صف</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          data-next-id="9"
+                          >بعدی برای پخش</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          >اشتراک</a
+                        >
+                      </li>
+                      <li class="dropdown-divider"></li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          data-play-id="9"
+                          >پخش</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+              <div
+                class="list__item"
+                data-song-id="10"
+                data-song-name="رگ خواب"
+                data-song-artist="همایون شجریان"
+                data-song-album="رگ خواب"
+                data-song-url="{% static 'audio/ringtone-2.mp3' %}"
+                data-song-cover="{% static 'images/music_covers/small/10.jpg' %}"
+              >
+                <div class="list__cover">
+                  <img
+                    src="{% static 'images/music_covers/small/10.jpg' %}"
+                    alt="رگ خواب"
+                  />
+                  <a
+                    href="javascript:void(0);"
+                    class="btn btn-play btn-sm btn-default btn-icon rounded-pill"
+                    data-play-id="10"
+                    aria-label="Play pause"
+                    ><i class="bi bi-play-fill fa-xl icon-play"></i>
+                    <i class="bi bi-pause-fill fa-xl icon-pause"></i
+                  ></a>
+                </div>
+                <div class="list__content">
+                  <a
+                    href="song-details.html"
+                    class="list__title text-truncate"
+                    >رگ خواب</a
+                  >
+                  <p class="list__subtitle text-truncate">
+                    <a href="artist-details.html">همایون شجریان</a>
+                  </p>
+                </div>
+                <ul class="list__option">
+                  <li>
+                    <a
+                      href="javascript:void(0);"
+                      role="button"
+                      class="d-inline-flex"
+                      aria-label="Favorite"
+                      data-favorite-id="10"
+                      ><i class="bi bi-heart fa-xl heart-empty"></i>
+                      <i class="bi bi-heart-fill fa-xl heart-fill"></i
+                    ></a>
+                  </li>
+                  <li>03:24</li>
+                  <li class="dropstart d-inline-flex">
+                    <a
+                      class="dropdown-link"
+                      href="javascript:void(0);"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-label="Cover options"
+                      aria-expanded="false"
+                      ><i class="bi bi-three-dots fa-xl"></i
+                    ></a>
+                    <ul class="dropdown-menu dropdown-menu-sm">
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          data-playlist-id="10"
+                          >افزودن به لیست</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          data-queue-id="10"
+                          >افزودن به صف</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          data-next-id="10"
+                          >بعدی برای پخش</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          >اشتراک</a
+                        >
+                      </li>
+                      <li class="dropdown-divider"></li>
+                      <li>
+                        <a
+                          class="dropdown-item"
+                          href="javascript:void(0);"
+                          role="button"
+                          data-play-id="10"
+                          >پخش</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-5 text-center">
+          <button  id="load-more-music" class="btn btn-primary"
+            ><div class="btn__wrap">
+              <i id='load-more-arrow-icon' class="bi bi-arrow-clockwise fa-xl"></i> <span>بارگیری بیشتر</span>
+            </div></button>
+        </div>
+      </div>
+      <div class="section">
+        <div class="section__head">
+          <div class="flex-grow-1">
+            <span class="section__subtitle"> محبوب ترین را گوش دهید</span>
+            <h3 class="mb-0">
+              محبوب <span class="text-primary">ترین ها</span>
+            </h3>
+          </div>
+          <a href="songs.html" class="btn btn-link">نمایش همه</a>
+        </div>
+        <div class="swiper-carousel swiper-carousel-button">
+          <div dir="rtl"
+            class="swiper"
+            data-swiper-slides="5"
+            data-swiper-autoplay="true"
+          >
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div
+                  class="cover cover--round"
+                  data-song-id="1"
+                  data-song-name="چنگیز"
+                  data-song-artist="محسن چاوشی"
+                  data-song-album="امیر بی گزند"
+                  data-song-url="{% static 'audio/ringtone-1.mp3' %}"
+                  data-song-cover="{% static 'images/music_covers/small/1.jpg' %}"
+                >
+                  <div class="cover__head">
+                    <ul class="cover__label d-flex">
+                      <li>
+                        <span class="badge rounded-pill bg-danger"
+                          ><i class="bi bi-heart-fill"></i
+                        ></span>
+                      </li>
+                    </ul>
+                    <div
+                      class="cover__options dropstart d-inline-flex ms-auto"
+                    >
+                      <a
+                        class="dropdown-link"
+                        href="javascript:void(0);"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-label="Cover options"
+                        aria-expanded="false"
+                        ><i class="bi bi-three-dots-vertical fa-xl"></i
+                      ></a>
+                      <ul class="dropdown-menu dropdown-menu-sm">
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="javascript:void(0);"
+                            role="button"
+                            data-favorite-id="1"
+                            >مورد علاقه</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="javascript:void(0);"
+                            role="button"
+                            data-playlist-id="1"
+                            >افزودن به لیست</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="javascript:void(0);"
+                            role="button"
+                            data-queue-id="1"
+                            >افزودن به صف</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="javascript:void(0);"
+                            role="button"
+                            data-next-id="1"
+                            >بعدی برای پخش</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="javascript:void(0);"
+                            role="button"
+                            >اشتراک</a
+                          >
+                        </li>
+                        <li class="dropdown-divider"></li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="javascript:void(0);"
+                            role="button"
+                            data-play-id="1"
+                            >پخش</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="cover__image">
+                    <img
+                      src="{% static 'images/music_covers/large/1.jpg' %}"
+                      alt="چنگیز"
+                    />
+                    <button
+                      type="button"
+                      class="btn btn-play btn-default btn-icon rounded-pill"
+                      data-play-id="1"
+                    >
+                      <i class="bi bi-play-fill fa-xl icon-play"></i>
+                      <i class="bi bi-pause-fill fa-xl icon-pause"></i>
+                    </button>
+                  </div>
+                  <div class="cover__foot">
+                    <a
+                      href="song-details.html"
+                      class="cover__title text-truncate"
+                      >چنگیز</a
+                    >
+                    <p class="cover__subtitle text-truncate">
+                      <a href="artist-details.html">محسن چاوشی</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="cover cover--round"
+                  data-song-id="2"
+                  data-song-name="جانا"
+                  data-song-artist="ایهام"
+                  data-song-album="جانا"
+                  data-song-url="{% static 'audio/ringtone-2.mp3' %}"
+                  data-song-cover="{% static 'images/music_covers/small/2.jpg' %}"
+                >
+                  <div class="cover__head">
+                    <ul class="cover__label d-flex">
+                      <li>
+                        <span class="badge rounded-pill bg-info"
+                          ><i class="bi bi-hearts"></i
+                        ></span>
+                      </li>
+                    </ul>
+                    <div
+                      class="cover__options dropstart d-inline-flex ms-auto"
+                    >
+                      <a
+                        class="dropdown-link"
+                        href="javascript:void(0);"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-label="Cover options"
+                        aria-expanded="false"
+                        ><i class="bi bi-three-dots-vertical fa-xl"></i
+                      ></a>
+                      <ul class="dropdown-menu dropdown-menu-sm">
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="javascript:void(0);"
+                            role="button"
+                            data-favorite-id="2"
+                            >مورد علاقه</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="javascript:void(0);"
+                            role="button"
+                            data-playlist-id="2"
+                            >افزودن به لیست</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="javascript:void(0);"
+                            role="button"
+                            data-queue-id="2"
+                            >افزودن به صف</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="javascript:void(0);"
+                            role="button"
+                            data-next-id="2"
+                            >بعدی برای پخش</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="javascript:void(0);"
+                            role="button"
+                            >اشتراک</a
+                          >
+                        </li>
+                        <li class="dropdown-divider"></li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="javascript:void(0);"
+                            role="button"
+                            data-play-id="2"
+                            >پخش</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="cover__image">
+                    <img
+                      src="{% static 'images/music_covers/large/2.jpg' %}"
+                      alt="جانا"
+                    />
+                    <button
+                      type="button"
+                      class="btn btn-play btn-default btn-icon rounded-pill"
+                      data-play-id="2"
+                    >
+                      <i class="bi bi-play-fill fa-xl icon-play"></i>
+                      <i class="bi bi-pause-fill fa-xl icon-pause"></i>
+                    </button>
+                  </div>
+                  <div class="cover__foot">
+                    <a
+                      href="song-details.html"
+                      class="cover__title text-truncate"
+                      >جانا</a
+                    >
+                    <p class="cover__subtitle text-truncate">
+                      <a href="artist-details.html">ایهام</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="cover cover--round"
+                  data-song-id="3"
+                  data-song-name="تو را که دیدم"
+                  data-song-artist="راغب"
+                  data-song-album="تو را که دیدم"
+                  data-song-url="{% static 'audio/ringtone-3.mp3' %}"
+                  data-song-cover="{% static 'images/music_covers/small/3.jpg' %}"
+                >
+                  <div class="cover__head">
+                    <div
+                      class="cover__options dropstart d-inline-flex ms-auto"
+                    >
+                      <a
+                        class="dropdown-link"
+                        href="javascript:void(0);"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-label="Cover options"
+                        aria-expanded="false"
+                        ><i class="bi bi-three-dots-vertical fa-xl"></i
+                      ></a>
+                      <ul class="dropdown-menu dropdown-menu-sm">
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="javascript:void(0);"
+                            role="button"
+                            data-favorite-id="3"
+                            >مورد علاقه</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="javascript:void(0);"
+                            role="button"
+                            data-playlist-id="3"
+                            >افزودن به لیست</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="javascript:void(0);"
+                            role="button"
+                            data-queue-id="3"
+                            >افزودن به صف</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="javascript:void(0);"
+                            role="button"
+                            data-next-id="3"
+                            >بعدی برای پخش</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="javascript:void(0);"
+                            role="button"
+                            >اشتراک</a
+                          >
+                        </li>
+                        <li class="dropdown-divider"></li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="javascript:void(0);"
+                            role="button"
+                            data-play-id="3"
+                            >پخش</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="cover__image">
+                    <img
+                      src="{% static 'images/music_covers/large/3.jpg' %}"
+                      alt="تو را که دیدم"
+                    />
+                    <button
+                      type="button"
+                      class="btn btn-play btn-default btn-icon rounded-pill"
+                      data-play-id="3"
+                    >
+                      <i class="bi bi-play-fill fa-xl icon-play"></i>
+                      <i class="bi bi-pause-fill fa-xl icon-pause"></i>
+                    </button>
+                  </div>
+                  <div class="cover__foot">
+                    <a
+                      href="song-details.html"
+                      class="cover__title text-truncate"
+                      >تو را که دیدم</a
+                    >
+                    <p class="cover__subtitle text-truncate">
+                      <a href="artist-details.html">راغب</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="cover cover--round"
+                  data-song-id="4"
+                  data-song-name="چراغونی"
+                  data-song-artist="علی یاسینی"
+                  data-song-album="چراغونی"
+                  data-song-url="{% static 'audio/ringtone-4.mp3' %}"
+                  data-song-cover="{% static 'images/music_covers/small/4.jpg' %}"
+                >
+                  <div class="cover__head">
+                    <ul class="cover__label d-flex">
+                      <li>
+                        <span class="badge rounded-pill bg-danger"
+                          ><i class="bi bi-heart-fill"></i
+                        ></span>
+                      </li>
+                      <li>
+                        <span class="badge rounded-pill bg-info"
+                          ><i class="bi bi-hearts"></i
+                        ></span>
+                      </li>
+                    </ul>
+                    <div
+                      class="cover__options dropstart d-inline-flex ms-auto"
+                    >
+                      <a
+                        class="dropdown-link"
+                        href="javascript:void(0);"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-label="Cover options"
+                        aria-expanded="false"
+                        ><i class="bi bi-three-dots-vertical fa-xl"></i
+                      ></a>
+                      <ul class="dropdown-menu dropdown-menu-sm">
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="javascript:void(0);"
+                            role="button"
+                            data-favorite-id="4"
+                            >مورد علاقه</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="javascript:void(0);"
+                            role="button"
+                            data-playlist-id="4"
+                            >افزودن به لیست</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="javascript:void(0);"
+                            role="button"
+                            data-queue-id="4"
+                            >افزودن به صف</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="javascript:void(0);"
+                            role="button"
+                            data-next-id="4"
+                            >بعدی برای پخش</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="javascript:void(0);"
+                            role="button"
+                            >اشتراک</a
+                          >
+                        </li>
+                        <li class="dropdown-divider"></li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="javascript:void(0);"
+                            role="button"
+                            data-play-id="4"
+                            >پخش</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="cover__image">
+                    <img src="{% static 'images/music_covers/large/4.jpg' %}" alt="چراغونی" />
+                    <button
+                      type="button"
+                      class="btn btn-play btn-default btn-icon rounded-pill"
+                      data-play-id="4"
+                    >
+                      <i class="bi bi-play-fill fa-xl icon-play"></i>
+                      <i class="bi bi-pause-fill fa-xl icon-pause"></i>
+                    </button>
+                  </div>
+                  <div class="cover__foot">
+                    <a
+                      href="song-details.html"
+                      class="cover__title text-truncate"
+                      >چراغونی</a
+                    >
+                    <p class="cover__subtitle text-truncate">
+                      <a href="artist-details.html">علی یاسینی</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="cover cover--round"
+                  data-song-id="5"
+                  data-song-name="پیرهن"
+                  data-song-artist="محمد لطفی"
+                  data-song-album="پیرهن"
+                  data-song-url="{% static 'audio/ringtone-5.mp3' %}"
+                  data-song-cover="{% static 'images/music_covers/small/5.jpg' %}"
+                >
+                  <div class="cover__head">
+                    <ul class="cover__label d-flex">
+                      <li>
+                        <span class="badge rounded-pill bg-info"
+                          ><i class="bi bi-hearts"></i
+                        ></span>
+                      </li>
+                    </ul>
+                    <div
+                      class="cover__options dropstart d-inline-flex ms-auto"
+                    >
+                      <a
+                        class="dropdown-link"
+                        href="javascript:void(0);"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-label="Cover options"
+                        aria-expanded="false"
+                        ><i class="bi bi-three-dots-vertical fa-xl"></i
+                      ></a>
+                      <ul class="dropdown-menu dropdown-menu-sm">
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="javascript:void(0);"
+                            role="button"
+                            data-favorite-id="5"
+                            >مورد علاقه</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="javascript:void(0);"
+                            role="button"
+                            data-playlist-id="5"
+                            >افزودن به لیست</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="javascript:void(0);"
+                            role="button"
+                            data-queue-id="5"
+                            >افزودن به صف</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="javascript:void(0);"
+                            role="button"
+                            data-next-id="5"
+                            >بعدی برای پخش</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="javascript:void(0);"
+                            role="button"
+                            >اشتراک</a
+                          >
+                        </li>
+                        <li class="dropdown-divider"></li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="javascript:void(0);"
+                            role="button"
+                            data-play-id="5"
+                            >پخش</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="cover__image">
+                    <img
+                      src="{% static 'images/music_covers/large/5.jpg' %}"
+                      alt="پیرهن"
+                    />
+                    <button
+                      type="button"
+                      class="btn btn-play btn-default btn-icon rounded-pill"
+                      data-play-id="5"
+                    >
+                      <i class="bi bi-play-fill fa-xl icon-play"></i>
+                      <i class="bi bi-pause-fill fa-xl icon-pause"></i>
+                    </button>
+                  </div>
+                  <div class="cover__foot">
+                    <a
+                      href="song-details.html"
+                      class="cover__title text-truncate"
+                      >پیرهن</a
+                    >
+                    <p class="cover__subtitle text-truncate">
+                      <a href="artist-details.html">محمد لطفی</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div
+                  class="cover cover--round"
+                  data-song-id="6"
+                  data-song-name="قشنگ من"
+                  data-song-artist="محسن چاوشی"
+                  data-song-album="قشنگ من"
+                  data-song-url="{% static 'audio/ringtone-6.mp3' %}"
+                  data-song-cover="{% static 'images/music_covers/small/6.jpg' %}"
+                >
+                  <div class="cover__head">
+                    <ul class="cover__label d-flex">
+                      <li>
+                        <span class="badge rounded-pill bg-info"
+                          ><i class="bi bi-hearts"></i
+                        ></span>
+                      </li>
+                    </ul>
+                    <div
+                      class="cover__options dropstart d-inline-flex ms-auto"
+                    >
+                      <a
+                        class="dropdown-link"
+                        href="javascript:void(0);"
+                        role="button"
+                        data-bs-toggle="dropdown"
+                        aria-label="Cover options"
+                        aria-expanded="false"
+                        ><i class="bi bi-three-dots-vertical fa-xl"></i
+                      ></a>
+                      <ul class="dropdown-menu dropdown-menu-sm">
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="javascript:void(0);"
+                            role="button"
+                            data-favorite-id="6"
+                            >مورد علاقه</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="javascript:void(0);"
+                            role="button"
+                            data-playlist-id="6"
+                            >افزودن به لیست</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="javascript:void(0);"
+                            role="button"
+                            data-queue-id="6"
+                            >افزودن به صف</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="javascript:void(0);"
+                            role="button"
+                            data-next-id="6"
+                            >بعدی برای پخش</a
+                          >
+                        </li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="javascript:void(0);"
+                            role="button"
+                            >اشتراک</a
+                          >
+                        </li>
+                        <li class="dropdown-divider"></li>
+                        <li>
+                          <a
+                            class="dropdown-item"
+                            href="javascript:void(0);"
+                            role="button"
+                            data-play-id="6"
+                            >پخش</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="cover__image">
+                    <img src="{% static 'images/music_covers/large/6.jpg' %}" alt="قشنگ من" />
+                    <button
+                      type="button"
+                      class="btn btn-play btn-default btn-icon rounded-pill"
+                      data-play-id="6"
+                    >
+                      <i class="bi bi-play-fill fa-xl icon-play"></i>
+                      <i class="bi bi-pause-fill fa-xl icon-pause"></i>
+                    </button>
+                  </div>
+                  <div class="cover__foot">
+                    <a
+                      href="song-details.html"
+                      class="cover__title text-truncate"
+                      >قشنگ من</a
+                    >
+                    <p class="cover__subtitle text-truncate">
+                      <a href="artist-details.html">محسن چاوشی</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-prev btn-default rounded-pill"></div>
+          <div class="swiper-button-next btn-default rounded-pill"></div>
+        </div>
+      </div>
+    </div>
+    <footer id="footer">
+    </footer>
+  </main>
+{% endblock content %}
