@@ -1,4 +1,7 @@
 {% load static %}
+{% url 'main:index' as main_index_url %}
+{% url 'music:index' as music_index_url %}
+{% url 'category:index' as category_index_url %}
   <aside id="sidebar">
     <div
       class="sidebar-head d-flex align-items-center justify-content-between"
@@ -21,23 +24,21 @@
       <nav class="navbar d-block p-0">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a
-              href="/listen-music/pages"
-              class="nav-link d-flex align-items-center active"
+            <a href="{{main_index_url}}" class="nav-link d-flex align-items-center  {% if request.path == main_index_url %}active{% endif %}"
               ><i class="bi bi-house fa-xl"></i>
               <span class="ps-3">خانه</span></a
             >
           </li>
 
           <li class="nav-item">
-            <a href="music.html" class="nav-link d-flex align-items-center"
+            <a href="{{music_index_url}}" class="nav-link d-flex align-items-center {% if request.path == music_index_url %}active{% endif %}"
               ><i class="bi bi-music-note fa-xl"></i>
               <span class="ps-3">موزیک</span></a
             >
           </li>
 
           <li class="nav-item">
-            <a href="genres.html" class="nav-link d-flex align-items-center"
+            <a href="{{category_index_url}}" class="nav-link d-flex align-items-center {% if request.path == category_index_url %}active{% endif %}"
               ><i class="bi bi-list-ul fa-xl"></i>
               <span class="ps-3">ژانر</span></a
             >
